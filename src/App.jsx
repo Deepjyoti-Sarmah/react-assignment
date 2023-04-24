@@ -1,25 +1,47 @@
+import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
 /*
  * Temporary problems array schema
  */
-const problems = [{
-    title: "201. Bitwise AND of Numbers Range",
-    difficulty: "Medium",
-    acceptance: "42%"
-}, {
-    title: "201. Bitwise AND of Numbers Range",
-    difficulty: "Medium",
-    acceptance: "412%"
-},
-{
-    title: "202. Happy Number",
-    difficulty: "Easy",
-    acceptance: "54.9%"
-},
-{
-    title: "203. Remove Linked List Elements",
-    difficulty: "Hard",
-    acceptance: "42%"
-}];
+// const problems = [{
+//     title: "201. Bitwise AND of Numbers Range",
+//     difficulty: "Medium",
+//     acceptance: "42%"
+// }, {
+//     title: "201. Bitwise AND of Numbers Range",
+//     difficulty: "Medium",
+//     acceptance: "412%"
+// },
+// {
+//     title: "202. Happy Number",
+//     difficulty: "Easy",
+//     acceptance: "54.9%"
+// },
+// {
+//     title: "203. Remove Linked List Elements",
+//     difficulty: "Hard",
+//     acceptance: "42%"
+// }];
+
+//hooks 
+// const getToken = () => {
+//     const tokenString = localStorage.getItem('token');
+//     const userToken = JSON.parse(tokenString);
+//     return userToken?.token
+// };
+
+// function useToken() {
+//     const [token, setToken] = useState(getToken());
+//     const saveToken = userToken => {
+//         localStorage.setItem('token', JSON.stringify(userToken));
+//         setToken(userToken.token)
+//     };
+//     return {
+//         setToken: saveToken,
+//         token
+//     }
+// }
 
 
 function App() {
@@ -31,29 +53,50 @@ function App() {
         /problems/:problem_slug - A single problem page
      */
 
+    // return (
+    //     <div>
+    //         Finish the assignment! Look at the comments in App.jsx as a starting point
+    //     </div>
+    // )
+
+    // const { token, setToken } = useToken();
+    // if (!token) {
+    //     return <Login setToken={setToken} isLoginpage={true} />
+    // }
+
     return (
-        <div>
-            Finish the assignment! Look at the comments in App.jsx as a starting point
-        </div>
+        <>
+            <BrowserRouter>
+                <Navbar />
+                <Routes>
+                    {/* <Route path="/" element={<Home />} />
+                    <Route path="/login" element={<Login />} />
+                    <Route path="/signup" element={<Signup />} />
+                    <Route path="/problemset/all" element={<Problems />} />
+                    <Route path=".problemset/:_id" element={<SingleProblem />} /> */}
+
+                </Routes>
+            </BrowserRouter>
+        </>
     )
 }
 
-// A demo component
-function ProblemStatement(props) {
-    const title = props.title;
-    const acceptance = props.acceptance;
-    const difficulty = props.difficulty;
+// // A demo component
+// function ProblemStatement(props) {
+//     const title = props.title;
+//     const acceptance = props.acceptance;
+//     const difficulty = props.difficulty;
 
-    return <tr>
-        <td>
-            {title}
-        </td>
-        <td>
-            {acceptance}
-        </td>
-        <td>
-            {difficulty}
-        </td>
-    </tr>
-}
+//     return <tr>
+//         <td>
+//             {title}
+//         </td>
+//         <td>
+//             {acceptance}
+//         </td>
+//         <td>
+//             {difficulty}
+//         </td>
+//     </tr>
+// }
 export default App;
