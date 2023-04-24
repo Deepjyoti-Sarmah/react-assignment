@@ -38,19 +38,19 @@ const Navbar = () => {
                                 <a href="/login" className='text-sm font-medium text-gray-100 hover:text-gray-200'>Sign in</a>
                             </div>
                         </div> */}
-                        <div class="relative ml-4 flex items-center space-x-4 ">
-                            <div class="flex items-center">
+                        <div className="relative ml-4 flex items-center space-x-4 ">
+                            <div className="flex items-center">
                                 <a
-                                    class="text-label-2 text-gray-300 hover:text-gray-100 hidden lg:flex"
+                                    className="text-label-2 text-gray-300 hover:text-gray-100 hidden lg:flex"
                                     href="/signup">
                                     Register
                                 </a>
                                 <span
-                                    class="mx-3 hidden lg:inline-block text-label-3 dark:text-dark-label-3">
+                                    className="mx-3 hidden lg:inline-block text-label-3 dark:text-dark-label-3">
                                     or
                                 </span>
                                 <a
-                                    class="text-label-2 text-gray-300 hover:text-gray-100 "
+                                    className="text-label-2 text-gray-300 hover:text-gray-100 "
                                     id="navbar_sign_in_button"
                                     href="/login">
                                     Sign in

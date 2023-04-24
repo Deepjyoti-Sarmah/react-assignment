@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Login from './components/Login';
+import { ProblemSet } from './components/ProblemSet';
+import problems from '../data/problemList';
+
 /*
  * Temporary problems array schema
  */
@@ -69,12 +73,11 @@ function App() {
             <BrowserRouter>
                 <Navbar />
                 <Routes>
-                    {/* <Route path="/" element={<Home />} />
+                    {/* <Route path="/" element={<Home />} /> */}
                     <Route path="/login" element={<Login />} />
-                    <Route path="/signup" element={<Signup />} />
-                    <Route path="/problemset/all" element={<Problems />} />
-                    <Route path=".problemset/:_id" element={<SingleProblem />} /> */}
-
+                    {/* <Route path="/signup" element={<Signup />} /> */}
+                    <Route path="/problemset/all" element={<ProblemSet problems={problems} />} />
+                    {/* <Route path=".problemset/:_id" element={<SingleProblem />} /> */}
                 </Routes>
             </BrowserRouter>
         </>
