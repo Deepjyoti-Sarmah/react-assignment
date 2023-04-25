@@ -1,11 +1,14 @@
 import React from 'react'
 import { Editor } from "@monaco-editor/react";
 import { Listbox, Transition } from "@headlessui/react";
-import { useState } from 'react';
+import { Fragment, useState } from 'react';
+// import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/24/outline";
+import defaultCodeSnippets from "./defaultCodeSnippets"
 
 const ProblemDescription = (props) => {
     const { id, title, statement, examples } = props;
     const [solutionLanguage, setSolutionLanguage] = useState("cpp");
+
     return (
         <div className="text-gray-800">
             <div className="mx-auto px-6 py-4">
@@ -33,10 +36,14 @@ const ProblemDescription = (props) => {
                             </div>
                         ))}
                     </div>
-                    <div className='grid grid-cols-1 border-orange-400'>
-                        <div className=''>
+                    <div className="grid grid-cols-1 border-orange-400">
+                        <div className="">
                             <Editor
                                 height="80vh"
+                                language={solutionLanguage}
+                                defaultValue={defaultCodeSnippets.javascript}
+                                value={defaultCodeSnippets[solutionLanguage]}
+                            // theme="vs-dark"
                             />
                         </div>
                         <div className="flex justify-end">
@@ -54,14 +61,14 @@ const ProblemDescription = (props) => {
                                                 </span>
                                             </Listbox.Button>
                                             <Transition
-                                            // as={Fragment}
-                                            // leave="transition ease-in duration-100"
-                                            // leaveFrom="opacity-100"
-                                            // leaveTo="opacity-0"
-                                            // className="bottom-full"
+                                                as={Fragment}
+                                                leave="transition ease-in duration-100"
+                                                leaveFrom="opacity-100"
+                                                leaveTo="opacity-0"
+                                                className="bottom-full"
                                             >
                                                 <Listbox.Options className="absolute mb-1 w-full max-h-60 overflow-auto rounded-md bg-white py-1 text-base shadow-md ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-                                                    {/* {Object.keys(defaultCodeSnippets).map(
+                                                    {Object.keys(defaultCodeSnippets).map(
                                                         (language, idx) => (
                                                             <Listbox.Option
                                                                 key={idx}
@@ -83,17 +90,17 @@ const ProblemDescription = (props) => {
                                                                         </span>
                                                                         {selected ? (
                                                                             <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-amber-600">
-                                                                                <CheckIcon
+                                                                                {/* <CheckIcon
                                                                                     className="h-5 w-5"
                                                                                     aria-hidden="true"
-                                                                                />
+                                                                                /> */}
                                                                             </span>
                                                                         ) : null}
                                                                     </>
                                                                 )}
                                                             </Listbox.Option>
                                                         )
-                                                    )} */}
+                                                    )}
                                                 </Listbox.Options>
                                             </Transition>
                                         </div>
