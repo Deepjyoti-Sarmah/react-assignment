@@ -10,19 +10,19 @@ const problems = [
     }, 
     {
         _id: 201,
-        title: "201. Bitwise AND of Numbers Range",
+        title: "Bitwise AND of Numbers Range",
         difficulty: "Medium",
         acceptance: "412%"
     },
     {
         _id: 202,
-        title: "202. Happy Number",
+        title: "Happy Number",
         difficulty: "Easy",
         acceptance: "54.9%"
     },
     {
         _id:203,
-        title: "203. Remove Linked List Elements",
+        title: "Remove Linked List Elements",
         difficulty: "Hard",
         acceptance: "42%"
     },

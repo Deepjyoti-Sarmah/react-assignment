@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Login from './components/Login';
 import { ProblemSet } from './components/ProblemSet';
 import problems from '../data/problemList';
+import SingleProblem from './components/SingleProblem';
 
 /*
  * Temporary problems array schema
@@ -57,16 +58,6 @@ function App() {
         /problems/:problem_slug - A single problem page
      */
 
-    // return (
-    //     <div>
-    //         Finish the assignment! Look at the comments in App.jsx as a starting point
-    //     </div>
-    // )
-
-    // const { token, setToken } = useToken();
-    // if (!token) {
-    //     return <Login setToken={setToken} isLoginpage={true} />
-    // }
 
     return (
         <>
@@ -77,7 +68,7 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     {/* <Route path="/signup" element={<Signup />} /> */}
                     <Route path="/problemset/all" element={<ProblemSet problems={problems} />} />
-                    {/* <Route path=".problemset/:_id" element={<SingleProblem />} /> */}
+                    <Route path="/problems/:_id" element={<SingleProblem />} />
                 </Routes>
             </BrowserRouter>
         </>
