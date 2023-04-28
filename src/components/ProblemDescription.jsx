@@ -115,4 +115,4 @@ const ProblemDescription = (props) => {
     )
 }
 
-export default ProblemDescription
+export default ProblemDescription;
