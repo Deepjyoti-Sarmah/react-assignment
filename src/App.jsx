@@ -5,6 +5,8 @@ import Login from './components/Login';
 import { ProblemSet } from './components/ProblemSet';
 import problems from '../data/problemList';
 import SingleProblem from './components/SingleProblem';
+import SignUp from './components/SignUp';
+import Home from './components/Home';
 
 /*
  * Temporary problems array schema
@@ -64,9 +66,9 @@ function App() {
             <BrowserRouter>
                 <Navbar />
                 <Routes>
-                    {/* <Route path="/" element={<Home />} /> */}
+                    <Route path="/" element={<Home />} />
                     <Route path="/login" element={<Login />} />
-                    {/* <Route path="/signup" element={<Signup />} /> */}
+                    <Route path="/signup" element={<SignUp />} />
                     <Route path="/problemset/all" element={<ProblemSet problems={problems} />} />
                     <Route path="/problems/:_id" element={<SingleProblem />} />
                 </Routes>

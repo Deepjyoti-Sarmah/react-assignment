@@ -2,7 +2,7 @@ import React from 'react'
 
 const Login = () => {
     return (
-        <div className="flex bg-black  min-h-screen flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+        <div className="flex bg-black min-h-screen flex-1 flex-col justify-center px-6 py-6 lg:px-8">
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
                 {/* <img
                     className="mx-auto h-10 w-auto"
@@ -75,7 +75,7 @@ const Login = () => {
                 </form>
 
                 <p className="mt-10 text-center text-sm text-gray-500">
-                    New User ?{" "}
+                    New User?{" "}
                     <a
                         href="/signup"
                         className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
