@@ -46,7 +46,7 @@ const ProblemDescription = (props) => {
                             // theme="vs-dark"
                             />
                         </div>
-                        <div className="flex justify-end">
+                        <div className="flex justify-end text-black">
                             <div className="w-full mt-auto max-w-xs">
                                 <Listbox value={solutionLanguage} onChange={setSolutionLanguage}>
                                     <div className="w-full items-right justify-right border-orange-700">
