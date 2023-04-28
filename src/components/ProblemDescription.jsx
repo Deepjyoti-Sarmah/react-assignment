@@ -10,7 +10,7 @@ const ProblemDescription = (props) => {
     const [solutionLanguage, setSolutionLanguage] = useState("cpp");
 
     return (
-        <div className="text-gray-800">
+        <div className="text-gray-100 min-h-screen bg-gray-950">
             <div className="mx-auto px-6 py-4">
                 <div className="grid grid-cols-2 gap-6 items-start">
                     <div className="grid grid-cols-1">
@@ -23,7 +23,7 @@ const ProblemDescription = (props) => {
                                 <div className="px-1 mt-6 mb-1 font-medium">
                                     Example {idx + 1}:
                                 </div>
-                                <div className="border-gray-500 bg-slate-100 rounded-2xl px-3 py-2">
+                                <div className="border-gray-700 bg-slate-600 rounded-2xl px-3 py-2">
                                     <div>
                                         <div className="font-bold">Input :</div>
                                         <div className="font-mono">{example.Input}</div>
